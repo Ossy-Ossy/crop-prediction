@@ -110,7 +110,7 @@ feature_columns = x.columns.tolist()
 crop_options = x.columns[4:14].tolist()
 # Country columns: index 14 to 114
 country_options = x.columns[14:115].tolist()
-model = joblib.load(model_crop_prediction.joblib")
+model = joblib.load("model_crop_prediction.joblib")
 scaler = joblib.load("scaler_crop_prediction.joblib")
 # APPLICATION TITLE
 st.title("🌾 Crop Yield Prediction System")
