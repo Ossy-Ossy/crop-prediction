@@ -11,7 +11,7 @@ st.set_page_config(
     layout="centered"
 )
 
-x = pd.read_csv("C:\\Users\\HP\\Downloads\\x_train_crop_prediction.csv")
+x = pd.read_csv("x_train_crop_prediction.csv")
 
 feature_columns = x.columns.tolist()
 
@@ -25,7 +25,7 @@ country_options = x.columns[14:115].tolist()
 
 # LOAD TRAINED MODEL
 
-model = joblib.load("C:\\Users\\HP\\Downloads\\model_crop_prediction.joblib")
+model = joblib.load("model_crop_prediction.joblib")
 
 # APPLICATION TITLE
 
@@ -89,7 +89,7 @@ country = st.selectbox(
     country_options
 )
 st.divider()
-scaler = joblib.load("C:\\Users\\hp\\Downloads\\scaler_crop_prediction.joblib")
+scaler = joblib.load("scaler_crop_prediction.joblib")
 
 # PREDICTION
 
