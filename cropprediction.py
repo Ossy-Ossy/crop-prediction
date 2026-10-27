@@ -103,21 +103,15 @@ def get_prediction_history():
 initialize_database()
 # LOAD DATA AND TRAINED MODEL
 
-x = pd.read_csv(
-    r"C:\Users\HP\Downloads\x_train_crop_prediction.csv")
+x = pd.read_csv("x_train_crop_prediction.csv")
 
 feature_columns = x.columns.tolist()
 # Crop columns: index 4 to 13
 crop_options = x.columns[4:14].tolist()
 # Country columns: index 14 to 114
 country_options = x.columns[14:115].tolist()
-model = joblib.load(
-    r"C:\Users\HP\Downloads\model_crop_prediction.joblib"
-)
-scaler = joblib.load(
-    r"C:\Users\HP\Downloads\scaler_crop_prediction.joblib"
-)
-
+model = joblib.load(model_crop_prediction.joblib")
+scaler = joblib.load("scaler_crop_prediction.joblib")
 # APPLICATION TITLE
 st.title("🌾 Crop Yield Prediction System")
 st.write(
